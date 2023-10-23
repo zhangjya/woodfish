@@ -1,0 +1,42 @@
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  /* 禁用x轴滚动 */
+  overflow-x: hidden;
+  /* 通用字体大小 */
+  font-size: 28px;
+  /* 通用字体 */
+  /* font-family: PingFangSC-Regular, PingFang SC; */
+  /* font-family: Inter, Open Sans, sans-serif; */
+  font-family: PingFang SC, Microsoft YaHei, -apple-system, BlinkMacSystemFont, Helvetica Neue,
+    Source Han Sans SC, Noto Sans CJK SC, sans-serif !important;
+  color: var(--color-text);
+}
+
+* {
+  /* 全局禁止长按出现复制框 */
+  user-select: none;
+  /* 全局指定盒模型 */
+  box-sizing: border-box;
+}
+
+/* 输入框不能禁止长按，会导致在ios上无法输入文字 */
+input,
+textarea {
+  user-select: auto;
+}
+
+/* 全局指定 img 默认宽高以及展示方式 */
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* 全局a标签样式 */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
