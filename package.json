@@ -1,12 +1,13 @@
 {
-  "name": "wtp-h5",
+  "name": "woodfish",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --mode development",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:deploy",
     "deploy": "gh-pages -d dist",
     "build": "vue-tsc && vite build --mode staging",
+    "build:deploy": "vue-tsc && vite build --mode deploy",
     "build:prod": "vue-tsc && vite build --mode production",
     "preview": "vite preview"
   },

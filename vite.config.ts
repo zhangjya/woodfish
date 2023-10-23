@@ -11,9 +11,10 @@ const pathResolve = (dir: string) => {
 // https://vitejs.dev/config/
 export default function ({ command, mode }: ConfigEnv): UserConfig {
   const isProduction = command === 'build';
+  const isDeploy = mode === 'deploy';
 
   return {
-    base: './',
+    base: isDeploy ? '/woodfish/' : '/',
     // 本地服务相关配置
     server,
     logLevel: isProduction ? 'error' : 'info',
@@ -40,6 +41,7 @@ export default function ({ command, mode }: ConfigEnv): UserConfig {
     },
     // 指定编译目标
     build: {
+      assetsInlineLimit: 30 * 1024,
       target: 'es2015',
       rollupOptions: {
         output: {

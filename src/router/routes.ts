@@ -3,17 +3,12 @@
 const routes = [
   {
     path: '/',
-    // redirect: '/home',
     component: () => import('/@/pages/home/Home.vue'),
+    // redirect: '/home',
     // children: [
     //   {
     //     path: '/home',
     //     component: () => import('/@/pages/home/Home.vue'),
-    //     meta: {
-    //       title: 'Home',
-    //       keepAlive: true,
-    //       bottomBar: true,
-    //     },
     //   },
     // ],
   },

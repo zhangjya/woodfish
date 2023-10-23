@@ -44,7 +44,6 @@ export function createVitePlugins(isBuild: boolean, mode: string) {
   if (isBuild) {
     // vite-plugin-imagemin
     // vitePlugins.push(ConfigImageminPlugin());
-
     // 开启pwa
     // vitePlugins.push(
     //   VitePWA({
@@ -67,28 +66,25 @@ export function createVitePlugins(isBuild: boolean, mode: string) {
     //     },
     //   }),
     // );
-
     // 打包分析
     // vitePlugins.push(visualizer({ open: true }) as any);
-
     // 兼容低版本浏览器
-    vitePlugins.push(
-      legacy({
-        targets: ['chrome 52'],
-      }),
-    );
-
+    // vitePlugins.push(
+    //   legacy({
+    //     targets: ['chrome 52'],
+    //   }),
+    // );
     // 开启.gz压缩  rollup-plugin-gzip
-    vitePlugins.push(
-      viteCompression({
-        verbose: true, // 默认即可
-        disable: false, //开启压缩(不禁用)，默认即可
-        deleteOriginFile: false, //删除源文件
-        threshold: 10240, //压缩前最小文件大小
-        algorithm: 'gzip', //压缩算法
-        ext: '.gz', //文件类型
-      }),
-    );
+    // vitePlugins.push(
+    //   viteCompression({
+    //     verbose: true, // 默认即可
+    //     disable: false, //开启压缩(不禁用)，默认即可
+    //     deleteOriginFile: false, //删除源文件
+    //     threshold: 10240, //压缩前最小文件大小
+    //     algorithm: 'gzip', //压缩算法
+    //     ext: '.gz', //文件类型
+    //   }),
+    // );
   }
 
   return vitePlugins;
